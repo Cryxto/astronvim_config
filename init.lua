@@ -36,6 +36,7 @@ return {
     -- Git = "",
     -- GitAdd = "[+]"Git = "",
     GitAdd = "",
+    --test
     GitBranch = "",
     GitChange = "",
     GitConflict = "",
