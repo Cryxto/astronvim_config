@@ -1,0 +1,68 @@
+{
+  "Extend layout": {
+    "prefix": "b:extends",
+    "body": "@extends('${1:name}')",
+    "description": "extends view layout"
+  },
+  "php": {
+    "prefix": "php",
+    "body": ["<?php $0 ?>"],
+    "description": "php tag"
+  },
+  "php_short_echo": {
+    "prefix": "echo",
+    "body": ["<?= $$0; ?>"],
+    "description": "php short echo"
+  },
+  "php_down": {
+    "prefix": "php down",
+    "body": ["<?php", "\t$0", "?>"],
+    "description": "php tag down style"
+  },
+  "input_element_text": {
+    "prefix": "formmel, form element",
+    "body": [
+      "<label for=\"${1:example}\">${3:example}</label>",
+      "<input type=\"${2:text}\" name=\"${1:example}\" id=\"${1:example}\" placeholder=\"enter ${1:example}\">"
+    ],
+    "description": "input_element_text"
+  },
+  "CI4 Templating load": {
+    "prefix": "CI4 Templating load, template, template default, templating",
+    "body": [
+      "<!-- ngeload template web + navbar -->",
+      "<?= $$0this->extend('${1:layout_located}'); ?>",
+      "",
+      "<?= $$0this->section('${2:content_name}'); ?>",
+      "<!-- disini nempatin isi atau content nya -->",
+      "${3:<!-- content -->}",
+      "<?= $$0this->endSection(); ?>"
+    ],
+    "description": "CI4 Templating load"
+  },
+  "CI4 default Templating load": {
+    "prefix": "CI4 default Templating load, template, template default, templating",
+    "body": [
+      "<!-- ngeload template web + navbar -->",
+      "<?= $$0this->extend('layout/template'); ?>",
+      "",
+      "<?= $$0this->section('content'); ?>",
+      "<!-- disini nempatin isi atau content nya -->",
+      "${1:<!-- content -->}",
+      "<?= $$0this->endSection(); ?>"
+    ],
+    "description": "CI4 default Templating load"
+  },
+
+  "Print Variable": {
+    "prefix": "print, echo escaped",
+    "body": ["{{ $1 }}"],
+    "description": "Prints a variable value in Blade syntax."
+  },
+
+  "Echo Unescaped Data": {
+    "prefix": "echo, echo unescaped",
+    "body": ["{!! $1 !!}"],
+    "description": "Echos unescaped data in Blade syntax."
+  }
+}

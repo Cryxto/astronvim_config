@@ -16,16 +16,16 @@ augroup auto_wrap
   autocmd FileType * setlocal wrap
 augroup END
 ]], true)
-
-vim.api.nvim_exec([[
-  augroup blade_php
-    autocmd!
-    autocmd BufNewFile,BufRead *.blade.php set filetype=html.blade.php
-    autocmd FileType html.blade.php set syntax=php
-    autocmd FileType html.blade.php set syntax=html
-  augroup END
-]], true)
 return {
+  -- plugins = {
+  --   {
+  --     "L3MON4D3/LuaSnip",
+  --     config = function(plugin, opts)
+  --       require "plugins.configs.luasnip" (plugin, opts)                                       -- include the default astronvim config that calls the setup call
+  --       require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } } -- load snippets paths
+  --     end,
+  --   },
+  -- },
   icons = {
     VimIcon = "",
     ScrollText = "",
@@ -137,6 +137,16 @@ return {
     servers = {
       -- "pyright"
     },
+    config = {
+      -- intelephense = {
+      --   cmd = { "intelephense", "--stdio" },
+      --   filetypes = { 'php', 'html.blade.php', 'blade' },
+      -- },
+      html = {
+        cmd = { "vscode-html-language-server", "--stdio" },
+        filetypes = { 'html', 'html.blade.php', 'blade' },
+      },
+    },
   },
   -- Configure require("lazy").setup() options
   lazy = {
@@ -152,6 +162,20 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    -- vim.treesitter.language.register('html', 'blade')
+    vim.api.nvim_exec([[
+  augroup blade_php
+    autocmd!
+    autocmd BufNewFile,BufRead *.blade.php set filetype=html.blade.php
+    autocmd FileType html.blade.php set syntax=php
+    autocmd FileType html.blade.php set syntax=html
+    autocmd FileType html.blade.php set syntax=blade
+  augroup END
+]], true)
+    vim.filetype.add {
+      extension =
+      { blade = 'html' }
+    }
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {

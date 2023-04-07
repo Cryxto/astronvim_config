@@ -9,4 +9,9 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  -- {
+  --   "jwalton512/vim-blade"
+  --   ,
+  --   lazy = false
+  -- }
 }
