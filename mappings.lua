@@ -31,6 +31,10 @@ return {
     ["<S-Down>"] = { ":'<,'>t'><cr>", desc = "" },
   },
   n = {
+    ["<leader>st"] = { ':LiveServer start<cr>', desc = "live server start" },
+    ["<leader>sp"] = { ':LiveServer stop<cr>', desc = "live server stop" },
+    ["<leader>mp"] = { ':MarkdownPreview<cr>', desc = "markdown preview" },
+    ["<leader>ms"] = { ':MarkdownPreviewStop<cr>', desc = "markdown preview stop" },
     ["<leader>cc"] = { '"+y', desc = "copy" },
     ["<leader>vv"] = { '"+p', desc = "paste" },
     ["<S-Down>"] = { "<cmd>t.<cr>", desc = "" },

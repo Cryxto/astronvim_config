@@ -23,4 +23,8 @@ return {
     -- Solve after MarkdownPreview do nothing :
     -- https://github.com/iamcco/markdown-preview.nvim/issues/509#issuecomment-1272483338
   },
+  {
+    "manzeloth/live-server",
+    lazy = false
+  }
 }
