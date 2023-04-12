@@ -14,4 +14,13 @@ return {
   --   ,
   --   lazy = false
   -- }
+  {
+    "iamcco/markdown-preview.nvim",
+    -- run = function()
+    --   vim.fn["mkdp#util#install"]()
+    -- end,
+    lazy = false,
+    -- Solve after MarkdownPreview do nothing :
+    -- https://github.com/iamcco/markdown-preview.nvim/issues/509#issuecomment-1272483338
+  },
 }

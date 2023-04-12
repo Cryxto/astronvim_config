@@ -82,9 +82,9 @@ return {
         },
         filesystem = {
           filtered_items = {
-            async_directory_scan = "auto",
-            follow_current_file = true,
-            use_libuv_file_watcher = true,
+            -- async_directory_scan = "auto",
+            -- follow_current_file = true,
+            -- use_libuv_file_watcher = true,
             visible = true,
             hide_dotfiles = false,
             hide_gitignored = false,
@@ -179,7 +179,7 @@ return {
           -- add padding
           padding = { right = 1 },
           -- define the section separator
-          surround = { separator = "left", condition = false, color = { main = "file_info_bg", right = "blank_bg" } },
+          surround = { separator = "left", condition = false, color = { main = "file_info_bg", right = "#000000" } },
         },
         -- status.component.builder {
         --   { provider = "" },
@@ -198,7 +198,7 @@ return {
           -- add padding
           padding = { right = 1 },
           -- define the section separator
-          surround = { separator = "left", condition = false, color = { main = "blank_bg" } },
+          surround = { separator = "left", condition = false, color = { main = "#000000" } },
         },
         -- add a component for the current git branch if it exists and use no separator for the sections
         status.component.git_branch { surround = { separator = "none" } },
