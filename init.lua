@@ -145,8 +145,8 @@ return {
       --   filetypes = { 'php', 'html.blade.php', 'blade' },
       -- },
       html = {
-        cmd = { "vscode-html-language-server", "--stdio" },
-        filetypes = { 'html', 'html.blade.php', 'blade' },
+        -- cmd = { "vscode-html-language-server", "--stdio" },
+        filetypes = {'html.ejs', 'html', 'html.blade.php', 'blade' },
       },
     },
   },
@@ -172,6 +172,12 @@ return {
     autocmd FileType html.blade.php set syntax=php
     autocmd FileType html.blade.php set syntax=html
     autocmd FileType html.blade.php set syntax=blade
+  augroup END
+]], true)
+    vim.api.nvim_exec([[
+  augroup ejs
+    autocmd!
+    autocmd BufNewFile,BufRead *.ejs set filetype=html
   augroup END
 ]], true)
     --    vim.api.nvim_exec([[

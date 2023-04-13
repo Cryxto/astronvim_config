@@ -28,6 +28,10 @@
       {
         "language": "html",
         "path": "./custom_html.json"
+      },
+      {
+        "language": "html",
+        "path": "./ejs-snippet.json"
       }
     ]
   }
