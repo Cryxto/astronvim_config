@@ -68,6 +68,11 @@
     "body": "class=\"$1\"",
     "description": "Insert a class attribute with a class name"
   },
+  "Name Attribute": {
+    "prefix": "name",
+    "body": "name=\"$1\"",
+    "description": "Insert a name attribute"
+  },
   "ID Attribute": {
     "prefix": "id",
     "body": "id=\"$1\"",
