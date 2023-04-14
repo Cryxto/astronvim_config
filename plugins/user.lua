@@ -26,5 +26,23 @@ return {
   {
     "manzeloth/live-server",
     lazy = false
-  }
+  },
+  -- {
+  --   "Pocco81/auto-save.nvim",
+  --   lazy = false,
+  -- }
+  -- {
+  --   "okuuva/auto-save.nvim",
+  --   cmd = "ASToggle",                        -- optional for lazy loading on command
+  --   event = { "InsertLeave", "TextChanged" } ,-- optional for lazy loading on trigger events
+  --   opts = {
+  --     -- your config goes here
+  --     -- or just leave it empty :)
+  --     trigger_events = {
+  --       immediate_save = { "BufLeave", "FocusLost", "TextChangedI" }, -- vim events that trigger an immediate save
+  --       defer_save = { "InsertLeave", "TextChanged" ,"CursorMoved", "CursorMovedI", "InsertChange", "TextChangedI", "InsertCharPre" }, -- vim events that trigger a deferred save (saves after `debounce_delay`)
+  --       -- cancel_defered_save = { "InsertEnter" },   -- vim events that cancel a pending deferred save
+  --     },
+  --   },
+  -- },
 }

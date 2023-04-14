@@ -53,16 +53,44 @@
     ],
     "description": "CI4 default Templating load"
   },
-
   "Print Variable": {
     "prefix": "print, echo escaped",
     "body": ["{{ $1 }}"],
     "description": "Prints a variable value in Blade syntax."
   },
-
   "Echo Unescaped Data": {
     "prefix": "echo, echo unescaped",
     "body": ["{!! $1 !!}"],
     "description": "Echos unescaped data in Blade syntax."
+  },
+  "Class Attribute": {
+    "prefix": "class",
+    "body": "class=\"$1\"",
+    "description": "Insert a class attribute with a class name"
+  },
+  "ID Attribute": {
+    "prefix": "id",
+    "body": "id=\"$1\"",
+    "description": "Insert an ID attribute with an ID name"
+  },
+  "Style Attribute": {
+    "prefix": "style",
+    "body": "style=\"$1\"",
+    "description": "Insert a style attribute with CSS properties"
+  },
+  "Title Attribute": {
+    "prefix": "title",
+    "body": "title=\"$1\"",
+    "description": "Insert a title attribute with text"
+  },
+  "Data Attribute": {
+    "prefix": "data",
+    "body": "data-$1=\"$2\"",
+    "description": "Insert a data attribute with a data name and value"
+  },
+  "Target Attribute": {
+    "prefix": "target",
+    "body": "target=\"$1\"",
+    "description": "Insert a target attribute with a target name"
   }
 }

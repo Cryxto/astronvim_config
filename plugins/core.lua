@@ -91,7 +91,7 @@ return {
             never_show_by_pattern = { -- uses glob style patterns
               ".null-ls_*",
             },
-            never_show = { ".git" },
+            never_show = { ".git", "node_modules" },
           },
         },
       })
