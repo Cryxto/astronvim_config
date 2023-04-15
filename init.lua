@@ -140,14 +140,17 @@ return {
       -- "pyright"
     },
     config = {
+      -- tailwindcss = {
+      --   filetypes = { 'jsx','tsx','js','ts','html','css' },
+      -- },
       -- intelephense = {
       --   cmd = { "intelephense", "--stdio" },
       --   filetypes = { 'php', 'html.blade.php', 'blade' },
       -- },
-      html = {
-        -- cmd = { "vscode-html-language-server", "--stdio" },
-        filetypes = {'html.ejs', 'html', 'html.blade.php', 'blade' },
-      },
+      -- html = {
+      --   -- cmd = { "vscode-html-language-server", "--stdio" },
+      --   filetypes = {'html.ejs', 'html', 'html.blade.php', 'blade' },
+      -- },
     },
   },
   -- Configure require("lazy").setup() options
